@@ -30,7 +30,7 @@ class HeaderSection extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 185, 31, 31), // Màu đỏ cam
+                  color: Color.fromARGB(255, 228, 56, 56), // Màu đỏ cam
                 ),
               ),
               TextSpan(
@@ -75,7 +75,7 @@ class HeaderSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.orange.withOpacity(0.3),
+            color: Colors.orange.withValues(alpha: 0.3),
             blurRadius: 8,
             offset: const Offset(0, 4),
           ),
@@ -103,7 +103,7 @@ class HeaderSection extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.orange.withOpacity(0.3),
+                            color: Colors.orange.withValues(alpha: 0.3),
                             blurRadius: 4,
                             offset: const Offset(0, 2),
                           ),
@@ -191,7 +191,7 @@ class HeaderSection extends StatelessWidget {
           child: _buildActionButton(
             icon: Icons.calendar_today,
             title: 'Đặt lịch khám',
-            color: const Color.fromARGB(255, 235, 100, 95),
+            color: const Color.fromARGB(255, 240, 87, 82),
           ),
         ),
         const SizedBox(width: 16), // Giảm khoảng cách
@@ -201,7 +201,7 @@ class HeaderSection extends StatelessWidget {
           child: _buildActionButton(
             icon: Icons.search,
             title: 'Tra cứu phiếu thu',
-            color: const Color(0xFF8C1DED), // Tím
+            color: const Color.fromARGB(255, 179, 111, 238), // Tím
           ),
         ),
         const SizedBox(width: 16),
@@ -211,7 +211,7 @@ class HeaderSection extends StatelessWidget {
           child: _buildActionButton(
             icon: Icons.favorite,
             title: 'Hồ sơ sức khoẻ',
-            color: const Color(0xFF00A200), // Xanh lá
+            color: const Color.fromARGB(255, 27, 187, 94), // Xanh lá
           ),
         ),
       ],
@@ -227,14 +227,18 @@ class HeaderSection extends StatelessWidget {
       height: 130, // Tăng chiều cao từ 100 lên 120
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [color.withOpacity(0.4), color, color.withOpacity(0.7)],
+          colors: [
+            color.withValues(alpha: 0.4),
+            color,
+            color.withValues(alpha: 0.7),
+          ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.5),
+            color: color.withValues(alpha: 0.5),
             blurRadius: 8,
             offset: const Offset(0, 4),
           ),
@@ -260,7 +264,7 @@ class HeaderSection extends StatelessWidget {
                     width: 60, // Tăng kích thước vòng tròn từ 50 lên 60
                     height: 60,
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
+                      color: Colors.white.withValues(alpha: 0.2),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(

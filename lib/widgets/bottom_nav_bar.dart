@@ -151,7 +151,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16),
                       boxShadow: [
                         BoxShadow(
-                          color: AppColors.activeColor.withOpacity(0.3),
+                          color: AppColors.activeColor.withValues(alpha: 0.3),
                           blurRadius: 10,
                           offset: const Offset(0, 3),
                         ),
@@ -180,15 +180,18 @@ class CustomBottomNavBar extends StatelessWidget {
                   Positioned(
                     bottom: 75,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color.fromARGB(255, 199, 42, 42).withOpacity(0.15),
+                            color: const Color.fromARGB(
+                              255,
+                              199,
+                              42,
+                              42,
+                            ).withValues(alpha: 0.15),
                             blurRadius: 12,
                             offset: const Offset(0, 4),
                           ),
